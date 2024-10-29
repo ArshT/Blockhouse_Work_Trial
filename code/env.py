@@ -61,8 +61,7 @@ class TradeExecutionEnv(gym.Env):
         self.remaining_shares = self.total_shares
         self.ask_price_1 = self.df['ask_price_1'][self.time_step]
 
-        self.time_step = (390 * self.num_ep_completed) % 16000
-        # print(self.time_step)
+        self.time_step = (390 * self.num_ep_completed) % 15600
         
         # Return initial observation and info (for Gymnasium compatibility)
         return np.array([self.get_inventory_level(), self.get_time_level()]), {}
