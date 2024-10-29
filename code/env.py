@@ -109,7 +109,7 @@ class TradeExecutionEnv(gym.Env):
 
         
         ### Reward Function-2 (As mentioned in the task description)
-        alpha = 0.01  # Example value; adjust based on empirical data
+        alpha = 4.439584265535017e-06 
         shares = shares_sold  # Number of shares sold in this step
 
         Slippage, Market_Impact = self.bm.compute_components(alpha, shares, self.time_step)
